@@ -50,8 +50,8 @@ todays_classes = schedule.get(today, [])
 for cls in todays_classes:
     if cls["time"] == timenow:
         smtplibObj = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-        smtplibObj.login("SENDERS_Email","Sender_app_pass")
+        smtplibObj.login("SENDER_EMAIL","SENDER_PASSWORD")
 
         message = f"Subject:Reminder - {cls['subject']}\n\nClass: {cls['subject']}\nRoom: {cls['room']}\nTime: {cls['time']}"
-        smtplibObj.sendmail("SENDERS_Email","Receiver_email",message)
+        smtplibObj.sendmail("SENDER_EMAIL","RECEIVER_EMAIL",message)
         smtplibObj.quit()
