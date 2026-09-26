@@ -36,7 +36,7 @@ schedule = {
     ]
 }
 schedule["Sunday"] = [
-    {"time": "04:43", "subject": "testcgs@gmail.com", "room": "TEST ROOM"}
+    {"time": "04:47", "subject": "testfgg", "room": "TEST ROOM"}
 ]
 
 # To locate today's day and time now 
