@@ -26,4 +26,4 @@ jobs:
           Sender_app_pass: ${{ secrets.Sender_app_pass }}
           Receiver_email: ${{ secrets.Receiver_email }}
 
-        run: python timetable_reminder.py
+        run: python timetable_reminder1.py
