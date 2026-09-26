@@ -35,7 +35,7 @@ schedule = {
         {"time": "16:45", "subject": "MA11003", "room": "NR211"}
     ],
     "Sunday": [
-    {"time": "05:21", "subject": "testfgg", "room": "TEST ROOM"}
+    {"time": "05:27", "subject": "testfgg", "room": "TEST ROOM"}
     ]
 }
 
