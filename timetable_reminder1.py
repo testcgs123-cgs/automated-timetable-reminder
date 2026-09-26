@@ -35,6 +35,9 @@ schedule = {
         {"time": "16:45", "subject": "MA11003", "room": "NR211"}
     ]
 }
+schedule["Sunday"] = [
+    {"time": "04:43", "subject": "testcgs@gmail.com", "room": "TEST ROOM"}
+]
 
 # To locate today's day and time now 
 now = datetime.datetime.now()
