@@ -33,11 +33,11 @@ schedule = {
         {"time": "07:45", "subject": "CY11003", "room": "NR111"},
         {"time": "14:45", "subject": "CS19003", "room": "In the PC Labs"},
         {"time": "16:45", "subject": "MA11003", "room": "NR211"}
+    ],
+    "Sunday": [
+    {"time": "05:17", "subject": "testfgg", "room": "TEST ROOM"}
     ]
 }
-schedule["Sunday"] = [
-    {"time": "05:10", "subject": "testfgg", "room": "TEST ROOM"}
-]
 
 # To locate today's day and time now 
 now = datetime.datetime.now()
