@@ -33,11 +33,11 @@ schedule = {
         {"time": "07:45", "subject": "CY11003", "room": "NR111"},
         {"time": "14:45", "subject": "CS19003", "room": "In the PC Labs"},
         {"time": "16:45", "subject": "MA11003", "room": "NR211"}
-    ]
-    # ],
-    # "Sunday": [
-    # {"time": "05:27", "subject": "testfgg", "room": "TEST ROOM"}
     # ]
+    ],
+    "Sunday": [
+    {"time": "05:27", "subject": "testfgg", "room": "TEST ROOM"}
+    ]
 }
 
 # To locate today's day and time now 
@@ -51,8 +51,8 @@ todays_classes = schedule.get(today, [])
 for cls in todays_classes:
     if cls["time"] == timenow:
         smtplibObj = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-        smtplibObj.login("SENDER_EMAIL","SENDER_PASSWORD")
+        smtplibObj.login("testcgs123@gmail.com","xdwz vmzi gqef hhyw")
 
         message = f"Subject:Reminder - {cls['subject']}\n\nClass: {cls['subject']}\nRoom: {cls['room']}\nTime: {cls['time']}"
-        smtplibObj.sendmail("SENDER_EMAIL","RECEIVER_EMAIL",message)
+        smtplibObj.sendmail("testcgs123@gmail.com","testcgs123@gmail.com",message)
         smtplibObj.quit()
