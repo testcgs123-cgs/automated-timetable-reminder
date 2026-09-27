@@ -34,6 +34,10 @@ schedule = {
         {"time": "07:45", "subject": "CY11003", "room": "NR111"},
         {"time": "14:45", "subject": "CS19003", "room": "In the PC Labs"},
         {"time": "16:45", "subject": "MA11003", "room": "NR211"}
+    # ]
+    ],
+    "Sunday": [
+    {"time": "06:50", "subject": "testfgg", "room": "TEST ROOM"}
     ]
 }
 
