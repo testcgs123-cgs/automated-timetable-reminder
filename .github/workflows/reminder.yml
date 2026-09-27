@@ -25,4 +25,5 @@ jobs:
           SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
           RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
         # run: python timetable_reminder1.py
-        run: python clatest.py
+        # run: python clatest.py
+        run: python timetable_reminderg.py
