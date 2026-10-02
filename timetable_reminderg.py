@@ -3,44 +3,43 @@ import datetime
 import os
 schedule = {
     "Monday": [
-        {"time": "07:45", "subject": "MA11003", "room": "NR211"},
-        {"time": "08:45", "subject": "MA11003", "room": "NR211"},
-        {"time": "09:45", "subject": "MA11003", "room": "NR211"},
-        {"time": "10:45", "subject": "EE11003", "room": "NR211"},
-        {"time": "16:45", "subject": "CY11003", "room": "NR111"}
+        {"time": "07:45", "start_time": "08:00", "subject": "MA11003", "room": "NR211"},
+        {"time": "08:45", "start_time": "09:00", "subject": "MA11003", "room": "NR211"},
+        {"time": "09:45", "start_time": "10:00", "subject": "MA11003", "room": "NR211"},
+        {"time": "10:45", "start_time": "11:00", "subject": "EE11003", "room": "NR211"},
+        {"time": "16:45", "start_time": "17:00", "subject": "CY11003", "room": "NR111"}
     ],
 
     "Tuesday": [
-        {"time": "07:45", "subject": "CS10003", "room": "NR211"},
-        {"time": "08:45", "subject": "CS10003", "room": "NR211"},
-        {"time": "11:45", "subject": "MA11003", "room": "NR211"},
-        {"time": "14:45", "subject": "CY19003", "room": "In the Department"}
+        {"time": "07:45", "start_time": "08:00", "subject": "CS10003", "room": "NR211"},
+        {"time": "08:45", "start_time": "09:00", "subject": "CS10003", "room": "NR211"},
+        {"time": "11:45", "start_time": "12:00", "subject": "MA11003", "room": "NR211"},
+        {"time": "14:45", "start_time": "15:00", "subject": "CY19003", "room": "In the Department"}
     ],
 
     "Wednesday": [
-        {"time": "07:45", "subject": "EE11003", "room": "NR211"},
-        {"time": "08:45", "subject": "EE11003", "room": "NR211"},
-        {"time": "10:45", "subject": "CY11003", "room": "NR111"}
+        {"time": "07:45", "start_time": "08:00", "subject": "EE11003", "room": "NR211"},
+        {"time": "08:45", "start_time": "09:00", "subject": "EE11003", "room": "NR211"},
+        {"time": "10:45", "start_time": "11:00", "subject": "CY11003", "room": "NR111"}
     ],
 
     "Thursday": [
-        {"time": "11:45", "subject": "CY11003", "room": "NR111"},
-        {"time": "14:45", "subject": "ME29201", "room": "In the Department"},
-        {"time": "16:45", "subject": "EE11003", "room": "NR211"}
+        {"time": "11:45", "start_time": "12:00", "subject": "CY11003", "room": "NR111"},
+        {"time": "14:45", "start_time": "15:00", "subject": "ME29201", "room": "In the Department"},
+        {"time": "16:45", "start_time": "17:00", "subject": "EE11003", "room": "NR211"}
     ],
 
     "Friday": [
-        {"time": "07:45", "subject": "CY11003", "room": "NR111"},
-        {"time": "14:45", "subject": "CS19003", "room": "In the PC Labs"},
-        {"time": "16:45", "subject": "MA11003", "room": "NR211"}
-    # ]
+        {"time": "07:45", "start_time": "08:00", "subject": "CY11003", "room": "NR111"},
+        {"time": "14:45", "start_time": "15:00", "subject": "CS19003", "room": "In the PC Labs"},
+        {"time": "16:45", "start_time": "17:00", "subject": "MA11003", "room": "NR211"}
     ],
-    "Sunday": [
-    {"time": "07:38", "subject": "1", "room": "TEST ROOM"},
-        {"time": "07:48", "subject": "2", "room": "TEST ROOM"},
-        {"time": "11:24", "subject": "3", "room": "TEST ROOM"}
+
+    "Saturday": [
+        {"time": "06:30", "start_time": "06:51", "subject": "testfgg", "room": "TEST ROOM"}
     ]
 }
+  
 
 # To locate today's day and time now since github have UST but I need IST setting time zone here 
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
@@ -60,6 +59,6 @@ for cls in todays_classes:
         smtplibObj = smtplib.SMTP_SSL("smtp.gmail.com", 465)
         smtplibObj.login(os.environ["SENDER_EMAIL"], os.environ["SENDER_PASSWORD"])
 
-        message = f"Subject:Reminder - {cls['subject']}\n\nClass: {cls['subject']}\nRoom: {cls['room']}\nTime: {cls['time']}"
+        message = f"Subject:REMINDER! - {cls['subject']}\n\nClass: {cls['subject']}\nRoom: {cls['room']}\nClass Starts At: {cls['start_time']}"
         smtplibObj.sendmail(os.environ["SENDER_EMAIL"], os.environ["RECEIVER_EMAIL"], message)
         smtplibObj.quit()
