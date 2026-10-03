@@ -36,10 +36,10 @@ schedule = {
     ],
 
     "Saturday": [
-        {"time": "17:06", "start_time": "06:51", "subject": "testfgg", "room": "TEST ROOM"}
+        {"time": "12:12", "start_time": "06:51", "subject": "testfgg", "room": "TEST ROOM"}
     ]
 }
-  
+
 
 # To locate today's day and time now since github have UST but I need IST setting time zone here 
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
@@ -59,6 +59,6 @@ for cls in todays_classes:
         smtplibObj = smtplib.SMTP_SSL("smtp.gmail.com", 465)
         smtplibObj.login(os.environ["SENDER_EMAIL"], os.environ["SENDER_PASSWORD"])
 
-        message = f"Subject:REMINDER! - {cls['subject']}\n\nClass: {cls['subject']}\nRoom: {cls['room']}\nClass Starts At: {cls['start_time']}"
+        message = f"Subject: REMINDER! - {cls['subject']}\n\nClass    : {cls['subject']}\nRoom     : {cls['room']}\nStarts At: {cls['start_time']}"
         smtplibObj.sendmail(os.environ["SENDER_EMAIL"], os.environ["RECEIVER_EMAIL"], message)
         smtplibObj.quit()
