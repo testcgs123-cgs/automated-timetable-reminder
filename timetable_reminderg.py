@@ -59,6 +59,6 @@ for cls in todays_classes:
         smtplibObj = smtplib.SMTP_SSL("smtp.gmail.com", 465)
         smtplibObj.login(os.environ["SENDER_EMAIL"], os.environ["SENDER_PASSWORD"])
 
-        message = f"Subject:CLASS REMINDER - {cls['subject']}\n\nSubject   :  {cls['subject']}\nRoom      :  {cls['room']}\nStarts     :  {cls['start_time']}"
+        message = f"Subject:CLASS REMINDER - {cls['subject']}\n\nSubject   :  {cls['subject']}\nRoom      :  {cls['room']}\nStarts      :  {cls['start_time']}"
         smtplibObj.sendmail(os.environ["SENDER_EMAIL"], os.environ["RECEIVER_EMAIL"], message)
         smtplibObj.quit()
