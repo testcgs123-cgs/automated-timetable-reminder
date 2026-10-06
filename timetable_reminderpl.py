@@ -52,7 +52,7 @@ if todays_classes and "05:55" <= current_time <= "06:05":
         body += f"{cls['time']} - {cls['subject']} ({cls['room']})\n"
 
     smtplibObj = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-    smtplibObj.login("testcgs123@gmail.com", "xdwz vmzi gqef hhyw")
+    smtplibObj.login("testcgs123@gmail.com", "APP_PASSWORD")# PLEASE ASK OF NEED TO CHECK HOW IT WORKS .....
     smtplibObj.sendmail("testcgs123@gmail.com", "testcgs123@gmail.com", f"Subject: Today's Timetable - {today}\n\n{body}")
     smtplibObj.quit()
 # now = datetime.datetime.now()
