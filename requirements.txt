@@ -1,0 +1,6 @@
+# No external package required
+because these are built in
+smtplib
+datetime
+os
+time
