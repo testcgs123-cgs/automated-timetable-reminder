@@ -33,10 +33,10 @@ schedule = {
         {"time": "07:45", "start_time": "08:00", "subject": "CY11003", "room": "NR111"},
         {"time": "14:45", "start_time": "15:00", "subject": "CS19003", "room": "In the PC Labs"},
         {"time": "16:45", "start_time": "17:00", "subject": "MA11003", "room": "NR211"}
-    # ],
-    #  "Sunday": [
-    #     {"time": "09:52", "start_time": "08:00", "subject": "CY11003", "room": "NR111"},
-    #     {"time": "17:00", "start_time": "08:00", "subject": "CY11003", "room": "NR111"}
+    ],
+     "Sunday": [
+        {"time": "09:52", "start_time": "08:00", "subject": "CY11003", "room": "NR111"},
+        {"time": "17:00", "start_time": "08:00", "subject": "CY11003", "room": "NR111"}
      ]
 }
 
