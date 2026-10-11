@@ -36,7 +36,7 @@ schedule = {
     ],
      "Sunday": [
         {"time": "09:52", "start_time": "08:00", "subject": "CY11003", "room": "NR111"},
-        {"time": "09:52", "start_time": "08:00", "subject": "CY11003", "room": "NR111"}
+        {"time": "17:00", "start_time": "08:00", "subject": "CY11003", "room": "NR111"}
      ]
 }
 
